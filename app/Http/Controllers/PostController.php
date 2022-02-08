@@ -28,8 +28,8 @@ class PostController extends Controller
             'title' => 'string',
             'content' => 'string',
             'image' => 'string',
-            'categories_id' => '',
-            'tags' => ''
+            'categories_id' => 'required',
+            'tags' => 'required'
 
         ]);
 
