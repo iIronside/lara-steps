@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::all();
+        $news = News::paginate(10);
         return view('news.index', compact('news'));
     }
 

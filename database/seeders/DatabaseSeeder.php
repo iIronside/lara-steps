@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categorie;
+use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Categorie::factory(10)->create();
+        Tag::factory(100)->create();
+        Post::factory(30)->create();
+//        // \App\Models\User::factory(10)->create();
     }
 }

@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Traits\Filterabel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use HasFactory;
+    use Filterabel;
+
     protected $fillable = [
         'title',
         'content',
@@ -16,7 +20,7 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    use HasFactory;
+
 
     public function tags()
     {
